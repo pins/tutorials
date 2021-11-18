@@ -1,0 +1,29 @@
+{
+  "type": "HASHED",
+  "id": 101,
+  "priority": 400000,
+  "timeout": 0,
+  "isPermanent": true,
+  "deviceId": "device:switch1",
+  "operation": "ADD",
+  "treatments": [
+    {
+      "instructions": [
+        {
+          "type": "L2MODIFICATION",
+          "subtype": "ETH_SRC",
+          "mac": "a8:2b:b5:f0:f0:f5"
+        },
+        {
+          "type": "L2MODIFICATION",
+          "subtype": "ETH_DST",
+          "mac": "40:a6:b7:28:be:d8"
+        },
+        {
+          "type": "OUTPUT",
+          "port": "120"
+        }
+      ]
+    }
+  ]
+}

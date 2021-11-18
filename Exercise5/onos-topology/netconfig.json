@@ -1,0 +1,309 @@
+{
+ "devices": {
+    "device:aristaBF": {
+      "ports":  {
+        "8": {
+          "enabled": true,
+          "name": "Ethernet8",
+          "number": 8,
+          "removed": false,
+          "speed": 100000,
+          "type": "copper"
+        },
+        "24": {
+          "enabled": true,
+          "name": "Ethernet24",
+          "number": 24,
+          "removed": false,
+          "speed": 100000,
+          "type": "copper"
+        },
+        "32": {
+          "enabled": true,
+          "name": "Ethernet32",
+          "number": 32,
+          "removed": false,
+          "speed": 100000,
+          "type": "copper"
+        },
+        "112": {
+          "enabled": true,
+          "name": "Ethernet112",
+          "number": 112,
+          "removed": false,
+          "speed": 100000,
+          "type": "copper"
+        },
+        "120": {
+          "enabled": true,
+          "name": "Ethernet120",
+          "number": 120,
+          "removed": false,
+          "speed": 100000,
+          "type": "copper"
+        }
+      },
+      "basic": {
+        "managementAddress": "grpc://10.70.2.7:9559?device_id=183807201",
+        "manufacturer": "Arista",
+        "hwVersion":"7170-64c",
+        "driver": "sonic",
+        "pipeconf": "org.onosproject.pipelines.sai",
+        "locType": "grid",
+        "gridX": 750,
+        "gridY": 600
+      },
+      "segmentrouting": {
+        "name": "aristabf",
+        "ipv4NodeSid": 200,
+        "ipv4Loopback": "192.168.0.200",
+        "ipv6NodeSid": 201,
+        "ipv6Loopback": "2000::c0a8:0200",
+        "routerMac": "8c:ea:1b:17:64:0c",
+        "isEdgeRouter": true,
+        "adjacencySids": []
+      }
+    },
+    "device:wedge100bf": {
+      "ports":  {
+        "0": {
+          "enabled": true,
+          "name": "Ethernet0",
+          "number": 0,
+          "removed": false,
+          "speed": 50000,
+          "type": "copper"
+        },
+        "8": {
+          "enabled": true,
+          "name": "Ethernet8",
+          "number": 8,
+          "removed": false,
+          "speed": 50000,
+          "type": "copper"
+        },
+        "16": {
+          "enabled": true,
+          "name": "Ethernet16",
+          "number": 16,
+          "removed": false,
+          "speed": 100000,
+          "type": "copper"
+        }
+      },
+      "basic": {
+        "managementAddress": "grpc://10.70.2.1:9559?device_id=183807201",
+        "manufacturer": "Edgecore",
+        "hwVersion":"Wedge100BF-32X",
+        "driver": "sonic",
+        "pipeconf": "org.onosproject.pipelines.sai",
+        "locType": "grid",
+        "gridX": 600,
+        "gridY": 400
+      },
+      "segmentrouting": {
+        "name": "wedge100bf",
+        "ipv4NodeSid": 100,
+        "ipv4Loopback": "192.168.0.100",
+        "ipv6NodeSid": 101,
+        "ipv6Loopback": "2000::c0a8:0100",
+        "routerMac": "00:90:fb:64:cc:9e",
+        "isEdgeRouter": false,
+        "adjacencySids": []
+      }
+    },
+    "device:arista1": {
+      "ports":  {
+        "0": {
+          "enabled": true,
+          "name": "Ethernet0",
+          "number": 0,
+          "removed": false,
+          "speed": 400000,
+          "type": "copper"
+        },
+        "36": {
+          "enabled": true,
+          "name": "Ethernet36",
+          "number": 36,
+          "removed": false,
+          "speed": 100000,
+          "type": "copper"
+        },
+        "52": {
+          "enabled": true,
+          "name": "Ethernet52",
+          "number": 52,
+          "removed": false,
+          "speed": 100000,
+          "type": "copper"
+        }
+      },
+      "basic": {
+        "managementAddress": "grpc://10.70.2.3:9559?device_id=183807201",
+        "manufacturer": "Arista",
+        "hwVersion":"7060DX4-C32",
+        "driver": "sonic",
+        "pipeconf": "org.onosproject.pipelines.sai",
+        "locType": "grid",
+        "gridX": 350,
+        "gridY": 400
+      },
+      "segmentrouting": {
+        "name": "arista1",
+        "ipv4NodeSid": 110,
+        "ipv4Loopback": "192.168.0.110",
+        "ipv6NodeSid": 111,
+        "ipv6Loopback": "2000::c0a8:0110",
+        "routerMac": "fc:bd:67:2b:4b:08",
+        "isEdgeRouter": false,
+        "adjacencySids": []
+      }
+    },
+    "device:arista2": {
+      "ports":  {
+        "0": {
+          "enabled": true,
+          "name": "Ethernet0",
+          "number": 0,
+          "removed": false,
+          "speed": 400000,
+          "type": "copper"
+        },
+        "16": {
+          "enabled": true,
+          "name": "Ethernet16",
+          "number": 16,
+          "removed": false,
+          "speed": 50000,
+          "type": "copper"
+        },
+        "20": {
+          "enabled": true,
+          "name": "Ethernet20",
+          "number": 20,
+          "removed": false,
+          "speed": 50000,
+          "type": "copper"
+        },
+        "240": {
+          "enabled": true,
+          "name": "Ethernet240",
+          "number": 240,
+          "removed": false,
+          "speed": 100000,
+          "type": "copper"
+        },
+        "244": {
+          "enabled": true,
+          "name": "Ethernet244",
+          "number": 244,
+          "removed": false,
+          "speed": 100000,
+          "type": "copper"
+        }
+      },
+      "basic": {
+        "managementAddress": "grpc://10.70.2.4:9559?device_id=183807201",
+        "manufacturer": "Arista",
+        "hwVersion":"7060DX4-C32",
+        "driver": "sonic",
+        "pipeconf": "org.onosproject.pipelines.sai",
+        "locType": "grid",
+        "gridX": 200,
+        "gridY": 600
+      },
+      "segmentrouting": {
+        "name": "arista2",
+        "ipv4NodeSid": 210,
+        "ipv4Loopback": "192.168.0.210",
+        "ipv6NodeSid": 211,
+        "ipv6Loopback": "2000::c0a8:0210",
+        "routerMac": "fc:bd:67:2b:c8:f8",
+        "isEdgeRouter": true,
+        "adjacencySids": []
+      }
+    }
+  },
+  "ports": {
+    "device:aristaBF/112": {
+      "interfaces": [
+        {
+          "name": "server-ensf1",
+          "ips": [
+            "172.16.101.254/24"
+          ],
+          "vlan-untagged": 10
+        }
+      ]
+    },
+    "device:aristaBF/120": {
+      "interfaces": [
+        {
+          "name": "server-ensf0",
+          "ips": [
+            "172.16.102.254/24"
+          ],
+          "vlan-untagged": 20
+        }
+      ]
+    },
+    "device:arista2/240": {
+      "interfaces": [
+        {
+          "name": "server-enp152s0f1",
+          "ips": [
+            "172.16.111.254/24"
+          ],
+          "vlan-untagged": 30
+        }
+      ]
+    },
+    "device:arista2/244": {
+      "interfaces": [
+        {
+          "name": "server-enp152s0f0",
+          "ips": [
+            "172.16.112.254/24"
+          ],
+          "vlan-untagged": 40
+        }
+      ]
+    }
+  },
+  "hosts": {
+     "3C:EC:EF:77:5B:A6/None": {
+       "basic": {
+	 "name": "host1",
+         "locType": "grid",
+         "gridX": 120,
+         "gridY": 700
+       }
+     },
+     "3C:EC:EF:77:5B:A7/None": {
+       "basic": {
+	 "name": "host2",
+       "locType": "grid",
+       "gridX": 280,
+       "gridY": 700
+       }
+     },
+     "3C:EC:EF:77:5B:06/None": {
+       "basic": {
+	 "name": "host3",
+       "locType": "grid",
+       "gridX": 670,
+       "gridY": 700
+       }
+     },
+     "3C:EC:EF:77:5B:07/None": {
+       "basic": {
+	 "name": "host4",
+       "locType": "grid",
+       "gridX": 830,
+       "gridY": 700
+       }
+     }
+
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "devices": {
+    "device:switch1": {
+      "ports":  {
+        "0": {
+          "enabled": true,
+          "name": "Ethernet0",
+          "number": 0,
+          "removed": false,
+          "speed": 100000,
+          "type": "copper"
+        },
+        "104": {
+          "enabled": true,
+          "name": "Ethernet104",
+          "number": 104,
+          "removed": false,
+          "speed": 100000,
+          "type": "copper"
+        },
+        "120": {
+          "enabled": true,
+          "name": "Ethernet120",
+          "number": 120,
+          "removed": false,
+          "speed": 40000,
+          "type": "copper"
+        }
+      },
+      "basic": {
+        "managementAddress": "grpc://10.70.2.5:9559?device_id=183807201",
+        "manufacturer": "Edgecore",
+        "hwVersion":"AS7712",
+        "driver": "sonic",
+        "pipeconf": "org.onosproject.pipelines.sai",
+        "locType": "grid",
+        "gridX": 200,
+        "gridY": 600
+      }
+    },
+    "device:switch2": {
+        "ports":  {
+          "0": {
+            "enabled": true,
+            "name": "Ethernet0",
+            "number": 0,
+            "removed": false,
+            "speed": 100000,
+            "type": "copper"
+          },
+          "104": {
+            "enabled": true,
+            "name": "Ethernet104",
+            "number": 104,
+            "removed": false,
+            "speed": 100000,
+            "type": "copper"
+          },
+          "120": {
+            "enabled": true,
+            "name": "Ethernet120",
+            "number": 120,
+            "removed": false,
+            "speed": 100000,
+            "type": "copper"
+          }
+        },
+        "basic": {
+          "managementAddress": "grpc://10.70.2.6:9559?device_id=183807201",
+          "manufacturer": "Edgecore",
+          "hwVersion":"AS7712",
+          "driver": "sonic",
+          "pipeconf": "org.onosproject.pipelines.sai",
+          "locType": "grid",
+          "gridX": 400,
+          "gridY": 600
+        }
+    }
+  },
+  "hosts" : {
+    "40:a6:b7:28:be:d8/None": {
+      "basic": {
+        "name": "host1",
+        "allowed": true,
+        "locType": "grid",
+        "gridX": 200,
+        "gridY": 800,
+        "ips": [
+          "10.1.1.2"
+        ],
+        "locations": [
+          "device:switch1/120"
+        ]
+      }
+    },
+    "00:07:43:4b:7f:50/None": {
+      "basic": {
+        "name": "host2",
+        "allowed": true,
+        "locType": "grid",
+        "gridX": 400,
+        "gridY": 800,
+        "ips": [
+          "10.2.2.2"
+        ],
+        "locations": [
+          "device:switch2/120"
+        ]
+      }
+    }  
+  }
+}

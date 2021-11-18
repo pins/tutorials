@@ -1,0 +1,21 @@
+{
+  "flag": "SPECIFIC",
+  "priority": 40000,
+  "timeout": 0,
+  "isPermanent": true,
+  "deviceId": "device:switch1",
+  "operation": "ADD",
+  "selector": {
+    "criteria": [
+      {
+        "type": "IPV4_DST",
+        "ip": "10.1.1.0/24"
+      },
+      {
+        "type": "ETH_TYPE",
+        "ethType": "0x0800"
+      }
+    ]
+  },
+  "nextId" : 101
+}
