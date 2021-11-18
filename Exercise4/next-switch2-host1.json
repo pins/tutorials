@@ -1,0 +1,47 @@
+{
+  "type": "HASHED",
+  "id": 200,
+  "priority": 400000,
+  "timeout": 0,
+  "isPermanent": true,
+  "deviceId": "device:switch2",
+  "operation": "ADD",
+  "treatments": [
+    {
+      "instructions": [
+        {
+          "type": "L2MODIFICATION",
+          "subtype": "ETH_DST",
+          "mac": "a8:2b:b5:f0:f0:f5"
+        },
+        {
+          "type": "L2MODIFICATION",
+          "subtype": "ETH_SRC",
+          "mac": "a8:2b:b5:f0:ed:e3"
+        },
+        {
+          "type": "OUTPUT",
+          "port": "0"
+        }
+      ]
+    },
+    {
+      "instructions": [
+        {
+          "type": "L2MODIFICATION",
+          "subtype": "ETH_DST",
+          "mac": "a8:2b:b5:f0:f0:f5"
+        },
+        {
+          "type": "L2MODIFICATION",
+          "subtype": "ETH_SRC",
+          "mac": "a8:2b:b5:f0:ed:e3"
+        },
+        {
+          "type": "OUTPUT",
+          "port": "104"
+        }
+      ]
+    }
+  ]
+}
