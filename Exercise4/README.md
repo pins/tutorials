@@ -1,6 +1,6 @@
 ## Exercise 4 - Deploy and Configure ONOS
 
-With the topology in [Exercise2 - Figure1](../Exercise2), you will use the ONOS Controller and REST API to configure the pipeline and routes in this exercise. You will be able to ping between your two hosts through the PINS fabric at the end of this exercise.
+With the topology in [Exercise2 - Figure 1](../Exercise2#figure-1---tutorial-sample-configuration), you will use the ONOS Controller and REST API to configure the pipeline and routes in this exercise. You will be able to ping between your two hosts through the PINS fabric at the end of this exercise.
 
 
 ### Starting From Scratch

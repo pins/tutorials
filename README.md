@@ -17,8 +17,8 @@ The highlights of the PINS/SONiC project are:
 * **Opt-In Path Towards SDN**: incrementally implement new SDN functions in SONiC 
 * **Hybrid Control Plane Support**: choose the network control plane and assign which parts run locally or remotely
 * **Familiar Interface**: model the SAI pipeline in P4 to control bridging, routing, ACLs, tunnels, and more
-* **Rapid Innovation**: model new features in P4 and expose them to control plane applications. 
-* **Automated Validation**: test and validate packet paths in the forwarding pipeline with P4Runtime.
+* **Rapid Innovation**: develop new data plane features in P4 and expose them to control plane applications
+* **Automated Validation**: test and validate packet paths in the forwarding pipeline with P4Runtime
 
 
 #### Why would you want to add SDN functionality to SONiC? 
@@ -33,12 +33,12 @@ SONiC is based on a Switch Abstraction Interface (SAI), a standardized interface
 
 #### What components does PINS add to SONiC?
 
-SONiC is structured into various containers that communicate via a shared Redis instance through multiple logical databases. The PINS project adds capabilities to SONiC as described in the [high-level design](https://github.com/pins/SONiC/blob/pins-hld/doc/pins/pins_hld.md), [definitions](https://github.com/Azure/SONiC/blob/078b908db3604e17f5b07e3656388a164e209427/doc/pins/pins_hld.md#definitions--abbreviations), and the [PINS architectural diagram](https://github.com/Azure/SONiC/blob/078b908db3604e17f5b07e3656388a164e209427/doc/pins/pins_hld.md#architecture).  [P4Runtime (P4RT)](https://github.com/pins/SONiC/blob/p4rt_hld/doc/pins/p4rt_app_hld.md) is a new application running in its own container that receives P4 programming requests from an SDN controller. P4RT writes intents to new P4 tables and supports clients with state information. New components (Github: [Azure/sonic-pins](https://github.com/Azure/sonic-pins)) include [P4Orch](https://github.com/pins/SONiC/blob/pins-hld/doc/pins/pins_hld.md#p4-orchagent) and [P4RT tables](https://github.com/pins/SONiC/blob/pins-hld/doc/pins/pins_hld.md#p4-appl-db-tables) to process database entries, create SAI objects, and add to the ASIC database. PINS also introduces modifications to [sonic-swss](https://github.com/Azure/sonic-swss), [sonic-swss-common](https://github.com/Azure/sonic-swss-common), and [sonic-buildimage](https://github.com/Azure/sonic-buildimage). 
+SONiC is structured into various containers that communicate via a shared Redis instance through multiple logical databases. The PINS project adds capabilities to SONiC as described in the [PINS high-level design document](https://github.com/pins/SONiC/blob/pins-hld/doc/pins/pins_hld.md).  [P4Runtime (P4RT)](https://github.com/pins/SONiC/blob/p4rt_hld/doc/pins/p4rt_app_hld.md) is a new application running in its own container that receives P4 programming requests from an SDN controller. P4RT writes intents to new P4 tables and supports clients with state information. New components (Github: [Azure/sonic-pins](https://github.com/Azure/sonic-pins)) include [P4Orch](https://github.com/pins/SONiC/blob/pins-hld/doc/pins/pins_hld.md#p4-orchagent) and [P4RT tables](https://github.com/pins/SONiC/blob/pins-hld/doc/pins/pins_hld.md#p4-appl-db-tables) to process database entries, create SAI objects, and add to the ASIC database. PINS also introduces modifications to [sonic-swss](https://github.com/Azure/sonic-swss), [sonic-swss-common](https://github.com/Azure/sonic-swss-common), and [sonic-buildimage](https://github.com/Azure/sonic-buildimage). 
 
 
 ### Tutorial Outline
 
-The tutorial and hands-on exercises familiarize users with PINS ([webpage](https://opennetworking.org/pins/), [Working Group Github repository](https://github.com/pins), [wiki](https://wiki.opennetworking.org/display/COM/PINS)). Activities assume a basic knowledge of SONiC ([webpage](https://azure.github.io/SONiC/), [Github repository](https://github.com/Azure/SONiC/), [wiki](https://github.com/azure/sonic/wiki)) and SDN, including the [P4 language](https://p4.org) and ONOS ([webpage](https://opennetworking.org/onos/), [wiki](https://wiki.onosproject.org/display/ONOS/ONOS)). We provide participants with configuration files and scripts.
+The tutorial and hands-on exercises familiarize users with PINS ([webpage](https://opennetworking.org/pins/), [Working Group Github repositories](https://github.com/pins), [wiki](https://wiki.opennetworking.org/display/COM/PINS)). Activities assume a basic knowledge of SONiC ([webpage](https://azure.github.io/SONiC/), [Github repository](https://github.com/Azure/SONiC/), [wiki](https://github.com/Azure/SONiC/wiki)) and SDN, including the [P4 language](https://p4.org) and ONOS ([webpage](https://opennetworking.org/onos/), [wiki](https://wiki.onosproject.org/display/ONOS/ONOS)). We provide participants with configuration files and scripts.
 
 The exercises provide step-by-step instructions and validation as follows:
 
@@ -46,7 +46,7 @@ The exercises provide step-by-step instructions and validation as follows:
 2. [Exercise 2 - Configure Tutorial Network](./Exercise2): configure host and switch interfaces
 3. [Exercise 3 - Set Up Pipeline and Routes](./Exercise3): set up connections using a simple command-line interface for P4Runtime. This exercise uses only one route between two switches.
 4. [Exercise 4 - Deploy and Configure ONOS](./Exercise4): deploy ONOS on your server and push the network configuration using flow objectives instead of the p4rt-client in the previous exercise. This exercise enables ECMP with two routes between the two switches.
-5. [Exercise 5 - PINS Fabric Demonstration](./Exercise5): This exercise explores the demonstration environment at the OCP summit. ONF implemented PINS on a 2x2 SD-Fabric and demonstrated WCMP.
+5. [Exercise 5 - PINS Fabric Demonstration](./Exercise5): This exercise explores the demonstration environment at the OCP summit. ONF implemented PINS on a 2x2 leaf-spine fabric and demonstrated WCMP using ONOS and SD-Fabric.
 6. Appendix - References: [Other Examples and Tutorials](References.md) are provided for particular areas of interest (i.e., P4, P4Runtime, gNMI, OpenConfig, ONOS, SONiC).
 7. Appendix - Build it Yourself: instructions to [build a SONiC/PINS target image](BuildTargetImage.md) and [build ONOS with PINS](BuildONOSwithPINS.md).
 
