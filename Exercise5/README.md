@@ -1,6 +1,6 @@
 ## Exercise 5 - PINS Fabric Demonstration
 
-PINS launched at the OCP Global Summit in November 2021. If you have not already watched the [complete video](https://www.youtube.com/watch?v=iZuWdiV9dnc) of the demonstration, here is a link that jumps to the beginning of the [Weighted Cost MultiPath (WCMP) Demo](https://www.youtube.com/watch?v=iZuWdiV9dnc&t=271s) (6:18). 
+PINS launched at the OCP Global Summit in November 2021. If you have not already watched the [complete video](https://www.youtube.com/watch?v=iZuWdiV9dnc) of the demonstration, here is a link that jumps to the beginning of the [Weighted Cost MultiPath (WCMP) Demo](https://www.youtube.com/watch?v=iZuWdiV9dnc&t=271s) (link starts at 4:43 and lasts 6:18 minutes). 
 
 This demonstration brings P4 and SDN to SONiC, using ONOS for a control plane to manage routes and set up the flow objectives. The pure SDN solution uses a multi-purpose L2/L3 leaf-spine switching fabric without traditional control protocols such as BGP.  The SDN Controller (ONOS) is decoupled from the data plane. In addition, the spines use L3 segment routing instead of MPLS. The result is that the fabric acts as one big router with P4 support in a SAI instantiation. For more information, explore the [Azure/sonic-pins/sai_p4](https://github.com/Azure/sonic-pins/tree/main/sai_p4/instantiations/google) repository. The `middleblock.p4` instantiation is close to what we used for our demonstration.
 

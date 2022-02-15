@@ -53,9 +53,9 @@ The exercises provide step-by-step instructions and validation as follows:
 
 ### Software Used in Tutorial
 
-To complete the exercises in this tutorial, you will use a variety of Linux and SONiC commands either directly or in the scripts we provide. Because there may be more than one way to view the same information, you may use alternate commands. Some of the software you’ll use include docker, redis-cli, and curl. 
+To complete the exercises in this tutorial, you will use a variety of Linux and SONiC commands either directly or in the scripts we provide. Because there may be more than one way to view the same information, you may use alternate commands. Some of the software you’ll use include `docker`, `redis-cli`, and `curl`. 
 
-For exercises 1 and 2, you will need to get the SONiC target images with PINS for your switches (.swi and/or .bin). If your switches do not have a previous version of SONiC installed, you will need to use the ONIE or Aboot installation software on your switch. 
+For exercises 1 and 2, you will need to get the SONiC target images with PINS for your switches (`.swi` and/or `.bin`). If your switches do not have a previous version of SONiC installed, you will need to use the ONIE or Aboot installation software on your switch. 
 
 Exercise 3 provides instructions to get `p4rt-client` and `macToIpv6`. Exercise 4 provides instructions to get an ONOS image with the PINS driver and pipeline installed. The [PINS tutorials repository](https://github.com/pins/tutorials) contains sample configuration files for the exercises.
 

@@ -3,7 +3,7 @@
         "localhost": {
             "hwsku": "Arista-7060DX4-C32",
             "platform": "x86_64-arista_7060dx4_32",
-            "mac": "fc:bd:67:2b:4b:08",
+            "mac": "fc:bd:67:2b:c8:f8",
             "hostname": "sonic",
             "type": "LeafRouter",
             "bgp_asn": "65100"
@@ -29,11 +29,20 @@
             "mtu": "9100"
         },
         "Ethernet16": {
-            "lanes": "17,18,19,20,21,22,23,24",
+            "lanes": "17,18,19.20",
             "alias": "Ethernet3/1",
             "index": "3",
 	    "id"   : "16",
-            "speed": "400000",
+            "speed": "100000",
+            "admin_status": "up",
+            "mtu": "9100"
+        },
+        "Ethernet20": {
+            "lanes": "21,22,23,24",
+            "alias": "Ethernet3/5",
+            "index": "3",
+	    "id"   : "20",
+            "speed": "100000",
             "admin_status": "up",
             "mtu": "9100"
         },
@@ -47,20 +56,11 @@
             "mtu": "9100"
         },
         "Ethernet32": {
-            "lanes": "33,34,35,36",
+            "lanes": "33,34,35,36,37,38,39,40",
             "alias": "Ethernet5/1",
             "index": "5",
 	    "id"   : "32",
-            "speed": "100000",
-            "admin_status": "up",
-            "mtu": "9100"
-        },
-        "Ethernet36": {
-            "lanes": "37,38,39,40",
-            "alias": "Ethernet5/5",
-            "index": "5",
-	    "id"   : "36",
-            "speed": "100000",
+            "speed": "400000",
             "admin_status": "up",
             "mtu": "9100"
         },
@@ -74,20 +74,11 @@
             "mtu": "9100"
         },
         "Ethernet48": {
-            "lanes": "49,50,51,52",
+            "lanes": "49,50,51,52,53,54,55,56",
             "alias": "Ethernet7/1",
             "index": "7",
 	    "id"   : "48",
-            "speed": "100000",
-            "admin_status": "up",
-            "mtu": "9100"
-        },
-        "Ethernet52": {
-            "lanes": "53,54,55,56",
-            "alias": "Ethernet7/5",
-            "index": "7",
-	    "id"   : "52",
-            "speed": "100000",
+            "speed": "400000",
             "admin_status": "up",
             "mtu": "9100"
         },

@@ -6,7 +6,7 @@ With the topology in [Exercise2 - Figure 1](../Exercise2#figure-1---tutorial-sam
 ### Starting From Scratch
 
 
-This section contains tips to help you start with a clean system, especially if you have run through these exercises previously. Don’t worry about simply going from Exercise 3, using the `p4rt-client`, to this exercise using ONOS. ONOS will clear the pipeline from the previous activity. 
+This section contains tips to help you start with a clean system, especially if you have run through these exercises previously. Don’t worry about simply going from Exercise 3, using the `p4rt-client`, to this exercise using ONOS. ONOS will clear the pipeline from the previous activity if the configuration is the same as in Exercise 3. If there are changes, just reload the configuration. 
 
 
 #### VRF
