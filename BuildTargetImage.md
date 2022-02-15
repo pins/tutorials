@@ -5,7 +5,7 @@
 
 This section provides instructions to build your target image. After you build your image, follow the instructions in [Exercise 1 - Deploy SONiC/PINS Target Image to Switches](./Exercise1).
 
-The following software is needed to build the image: `curl, zip, unzip, tar, python,` and `j2cli`. If you need to do a local build of the ONOS driver and SAI pipeline, you will also need `maven` and `JDK`.
+The following software is needed to build the image: `curl, zip, unzip, tar, python,` and `j2cli`. If you need to do a local build of the ONOS driver and SAI pipeline, you will also need `maven` and a Java JDK.
 
 
 
@@ -13,7 +13,7 @@ The following software is needed to build the image: `curl, zip, unzip, tar, pyt
     * HTTPS:       `git clone https://github.com/Azure/sonic-buildimage.git` 
     * SSH:         `git clone git@github.com:Azure/sonic-buildimage.git`
     * Github CLI:  `gh repo clone Azure/sonic-buildimage`
-2. Change to the new directory:` cd sonic-buildimage`
+2. Change to the new directory: `cd sonic-buildimage`
 3. Download submodules and checkout the correct commit number: `make init`
 
 
@@ -23,7 +23,7 @@ Configure your build variables (`$BUILD_VARS`) on the command line or in the `ru
 
 
 
-* Debian buster is the currently supported version; hence use `NOJESSIE=1 NOSTRETCH=1` 
+* Debian Buster is the currently supported version; hence use `NOJESSIE=1 NOSTRETCH=1` 
 * The default password for the admin user, `YourPaSsWoRd,` should be overridden with a local value.
 * Setting the cache method, `SONIC_DPKG_CACHE_METHOD=rwcache`, speeds up the build process (after the first time) by caching non-SONiC specific build products such as the Linux kernel.
 * Set `INCLUDE_P4RT=y` to build the P4RT app and configure the image to run it

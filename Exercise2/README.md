@@ -2,7 +2,7 @@
 
 The tutorial configuration consists of a server (it can be a laptop), two switches, and two hosts, as shown in the following diagram. There are a variety of ways that you could implement this configuration, such as using two servers or using namespaces, lxc containers, or VMs on a single server. For simplicity, we show two separate hosts.
 
-This exercise will set up the host interfaces and internal routes. Then you will set up the SONiC switch interfaces. You will not be able to ping between the two hosts because the routes between the switches do not exist yet.
+This exercise will set up the host interfaces and internal routes. Then you will set up the SONiC switch interfaces. You will not be able to ping between the two hosts because the routes between the switches do not exist yet (we have not configured BGP or any other embedded control protocol).
 
 
 ### Figure 1 - Tutorial Sample Configuration
@@ -107,7 +107,7 @@ host2$ ip route
 
 
 
-1. Configure the switch interfaces with IP addresses in the same block as the IP addresses in your hosts. If you need to reboot your switches in exercises 3 or 4, remember to repeat this step.
+1. Configure the switch interfaces with IP addresses in the same subnet as the IP addresses in your hosts. If you need to reboot your switches in exercises 3 or 4, remember to repeat this step.
 
     ```
     switch1$ sudo config interface ip add Ethernet120 10.1.1.1/24

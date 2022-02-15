@@ -2,7 +2,7 @@
 
 ### References
 
-1. P4 runtime: [https://github.com/p4lang/p4runtime](https://github.com/p4lang/p4runtime) 
+1. P4Runtime (P4RT): [https://github.com/p4lang/p4runtime](https://github.com/p4lang/p4runtime) 
 2. OpenConfig: [https://www.openconfig.net/](https://www.openconfig.net/)
 3. gNMI: [https://github.com/openconfig/gnmi](https://github.com/openconfig/gnmi)
 4. SAI and P4RT: [P4 Programs and P4Info](https://github.com/pins/SONiC/blob/p4rt_hld/doc/pins/p4rt_app_hld.md#p4-programs--p4info)

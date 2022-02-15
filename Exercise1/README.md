@@ -5,19 +5,19 @@ This exercise will take you through the deployment of the SONiC/PINS target imag
 
 ### Get the SONiC/PINS Target Image(s) for Your Switches
 
-SONiC/PINS target images are currently available on Github [PINS releases](https://github.com/pins/sonic-buildimage-public/releases/tag/az-master-12.17.21). There is one SONiC/PINS image per ASIC, so be sure to select the correct image for your switch. Most images end in `.bin`, except Arista switches, which end in `.swi`.
+SONiC/PINS images for select targets are currently available on Github. There is one SONiC/PINS image per ASIC, so be sure to select the correct image for your switch. Most images end in `.bin`, except Arista switches, which end in `.swi`.
 
 You can either access the image directly on Github or copy the image to your local server or switch. This tutorial illustrates some of your choices, but getting the image is up to you. Your hardware vendor may have switch-specific instructions to acquire and load software.
 
-To copy the link from Github, go to [PINS releases](https://github.com/pins/sonic-buildimage-public/releases/tag/az-master-12.17.21), select your target image, and copy the URL. The target image URL format is `https://$IMAGE_SERVER/$IMAGE_DIR/$IMAGE`.
+To copy the link from Github, go to [PINS releases](https://github.com/pins/sonic-buildimage-public/releases/tag/202106-10-27), select your target image, and copy the URL.
 
-Example URL for a GitHub target image.
-
+Example URL for a Broadcom-based target image from Github:
 
 ```
 https://github.com/pins/sonic-buildimage-public/releases/download/202106-10-27/sonic-broadcom.bin
 ```
 
+*Note: The default username/password for PINS images on Github is:* `admin/admin`
 
 If you are a systems integrator and you are creating a custom image for your switch, you will need to follow the instructions in [Build SONiC/PINS Target Image](../BuildTargetImage.md). For help, please use the SONiC/PINS support channels.
 
@@ -153,7 +153,7 @@ Switch$ sudo reboot now
 
 #### ONIE Installer
 
-The ONIE installer does not necessarily have SSL installed to get a target image directly from GitHub. One alternative is to download the target image onto your server (e.g., `wget`) and run a web server (e.g., python’s `SimpleHTTPSever`) to give local access to the image (e.g., `http://${YOUR_IP}:8000/sonic-broadcom.bin).`
+The ONIE installer does not necessarily have SSL installed to get a target image directly from GitHub. One alternative is to download the target image onto your server (e.g., `wget`) and run a web server (e.g., python’s `SimpleHTTPSever`) to give local access to the image (e.g., `http://${YOUR_IP}:8000/sonic-broadcom.bin`).
 
 
 
@@ -170,7 +170,7 @@ The ONIE installer does not necessarily have SSL installed to get a target image
 
 2. Instead of logging in to the switch via `ssh`, you will need to connect a console cable (e.g., USB, DB-9) from the switch to an adjacent computer. Then, open the console software (e.g., `screen` or `minicom`) and connect to the switch over the serial port. Note that the baud rate is switch-specific for the serial port you are using.
 
-    Examples from ONF’s server (pins-dev2) to tutorial switches (pins-as7712-2 and pins-as7712-3):
+    Examples:
 
 
     ```
@@ -182,7 +182,7 @@ The ONIE installer does not necessarily have SSL installed to get a target image
 
     If the `screen` program acts unexpectedly, use `Ctrl-a d` to exit `screen` and then reset the console connection. (unplug the cable)
 
-3. Log in to the switch (default username/password is “admin/YourPaSsWoRd”) and reboot.
+3. Log in to the switch (default username/password is "admin/YourPaSsWoRd" for SONiC images and "admin/admin" for PINS images) and reboot.
     ```
     Switch$ sudo reboot now
     ```
@@ -193,7 +193,7 @@ The ONIE installer does not necessarily have SSL installed to get a target image
     ```
 6. Install the target image.
 
-    Example from ONF’s server (pins-dev2) in step 1:
+    Example installation from ONF’s server (10.128.13.243) in step 1:
 
 
     ```
@@ -201,7 +201,7 @@ The ONIE installer does not necessarily have SSL installed to get a target image
     ```
 
 
-7. After the software is loaded, it will reboot and present you with a SONiC/PINS login prompt.
+7. After the software is loaded, it will reboot and present you with a SONiC login prompt.
 
 
 #### Aboot Installer
@@ -223,7 +223,7 @@ The Aboot installer does not necessarily have SSL installed to get a target imag
 
 2. Instead of logging in to the switch via `ssh`, you will need to connect a console cable (e.g., USB, DB-9) from the switch to an adjacent computer. Then, open the console software (e.g., `screen` or `minicom`) and connect to the switch over the serial port. Note that the baud rate is switch-specific for the serial port you are using.
 
-    Examples from ONF’s server (pins-server) to the Arista tutorial switch:
+    Example:
 
 
     ```
@@ -234,7 +234,7 @@ The Aboot installer does not necessarily have SSL installed to get a target imag
 
     If the `screen` program acts unexpectedly, use `Ctrl-a d` to exit `screen` and then reset the console connection. (unplug the cable)
 
-3. Log in to the switch (default username/password is “admin/YourPaSsWoRd”) and reboot. 
+3. Log in to the switch (default username/password is "admin/YourPaSsWoRd" for SONiC images and "admin/admin" for PINS images) and reboot. 
     ```
     Switch$ sudo reboot now
     ```
@@ -266,7 +266,7 @@ Example:
     ```
 
 
-8. Once the software is loaded, it will reboot and present you with a SONiC/PINS login prompt.
+8. Once the software is loaded, it will reboot and present you with a SONiC login prompt.
 
 
 ### Validate SONiC/PINS Installation
@@ -316,7 +316,7 @@ Switch$ show logging -f | grep p4rt
 ```
 
 
-If you see the following message, SONiC/PINS has gone into a critical state.
+If you see the following message, SONiC/PINS has gone into a critical state and will not accept any writes until the device is rebooted:
 
 
 ```
@@ -324,7 +324,7 @@ Sep 17 20:35:13.681725 pins-as7712-3 NOTICE p4rt#p4rt: :- CallLuaScript: Compone
 ```
 
 
-You can look at previous messages to determine why this occurred. One possibility is that ONOS is running in your network and pushing a different version of p4info to the switch. **_The database can only be set up once before you configure the routes._** If ONOS is running on a server connected to the switch, kill the docker container for ONOS. Regardless of the cause of a critical state, we recommend that you reboot your switches.
+You can look at previous messages to determine why this occurred. One possibility is that ONOS is running in your network and pushing a different version of p4info to the switch. **_The P4 pipeline can only be pushed once before you configure the routes._** If ONOS is running on a server connected to the switch, kill the docker container for ONOS. Regardless of the cause of a critical state, we recommend that you reboot your switches.
 
 The `pmon` and `snmp` processes will log numerous errors unless configured with NMS. To eliminate those errors, use the following command.
 
@@ -334,7 +334,7 @@ Switch$ show logging -f | grep -v pmon | grep -v snmp
 ```
 
 
-Check `/etc/sonic/config_db.json `for interface configuration. A mismatched FEC prevents the interface from going to an UP/UP state. If you modify this file, use the `sudo config reload -y `command to restart the docker containers and incorporate the changes.
+Check `/etc/sonic/config_db.json` for interface configuration. A mismatched FEC prevents the interface from going to an UP/UP state. If you modify this file, use the `sudo config reload -y` command to restart the docker containers and incorporate the changes.
 
 The [Troubleshooting section](https://github.com/Azure/SONiC/blob/master/doc/SONiC-User-Manual.md#6-troubleshooting) of the SONiC User Manual is helpful if you run into problems. 
 

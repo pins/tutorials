@@ -1,6 +1,6 @@
 ## Exercise 5 - PINS Fabric Demonstration
 
-PINS launched at the OCP Summit. If you have not already watched the [complete vide](https://www.youtube.com/watch?v=iZuWdiV9dnc)o of the demonstration, here is a link that jumps to the beginning of the [Weighted Cost MultiPath (WCMP) Demo](https://www.youtube.com/watch?v=iZuWdiV9dnc&t=271s) (6:18). 
+PINS launched at the OCP Global Summit in November 2021. If you have not already watched the [complete video](https://www.youtube.com/watch?v=iZuWdiV9dnc) of the demonstration, here is a link that jumps to the beginning of the [Weighted Cost MultiPath (WCMP) Demo](https://www.youtube.com/watch?v=iZuWdiV9dnc&t=271s) (6:18). 
 
 This demonstration brings P4 and SDN to SONiC, using ONOS for a control plane to manage routes and set up the flow objectives. The pure SDN solution uses a multi-purpose L2/L3 leaf-spine switching fabric without traditional control protocols such as BGP.  The SDN Controller (ONOS) is decoupled from the data plane. In addition, the spines use L3 segment routing instead of MPLS. The result is that the fabric acts as one big router with P4 support in a SAI instantiation. For more information, explore the [Azure/sonic-pins/sai_p4](https://github.com/Azure/sonic-pins/tree/main/sai_p4/instantiations/google) repository. The `middleblock.p4` instantiation is close to what we used for our demonstration.
 
@@ -39,7 +39,7 @@ There are five folders containing configuration files in this exercise, one for 
 2. `spine-accton-BF`: Accton Wedge100BF-32X, Intel Barefoot Tofino
 3. `leaf-arista-TH3`: Arista 7060DX4-C32, Broadcom Tomahawk3
 4. `leaf-arista-BF`: Arista 7170-64C, Intel Barefoot Tofino
-5. `onos-topology`: ONOS configuration file, `netconfig.json`, for segment routing and gRPC connections (p4 runtime connections)
+5. `onos-topology`: ONOS configuration file, `netconfig.json`, for segment routing and gRPC connections (i.e. the P4Runtime connection)
 
 The docker container with ONOS that you got in Exercise 4 has the PINS driver and SAI pipeliner installed. There are two pipelines in `org.onosproject.pipelines.sai` and `org.onosproject.pipelines.sai_fixed`. The latter does not include ACLs. If your topology has other requirements and you need to create other pipelines, explore the [SONiC ONOS Driver](https://github.com/pins/sonic-onos-driver) repository, especially the [loader](https://github.com/pins/sonic-onos-driver/blob/main/pipeliner/src/main/java/org/onosproject/pipelines/sai/SaiPipeconfLoader.java). You will also need follow the instructions in [Build ONOS with PINS](../BuildONOSwithPINS) instead of using the docker image we built for you in Exercise 4.
 
