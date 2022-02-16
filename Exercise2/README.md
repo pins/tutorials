@@ -1,21 +1,33 @@
+<!--
+Copyright 2021-present Open Networking Foundation
+
+SPDX-License-Identifier: Apache-2.0
+-->
 ## Exercise 2 - Configure Tutorial Network
 
-The tutorial configuration consists of a server (it can be a laptop), two switches, and two hosts, as shown in the following diagram. There are a variety of ways that you could implement this configuration, such as using two servers or using namespaces, lxc containers, or VMs on a single server. For simplicity, we show two separate hosts.
+The tutorial configuration consists of a server (it can be a laptop), two
+switches, and two hosts, as shown in the following diagram. There are a variety
+of ways that you could implement this configuration, such as using two servers
+or using namespaces, lxc containers, or VMs on a single server. For simplicity,
+we show two separate hosts.
 
-This exercise will set up the host interfaces and internal routes. Then you will set up the SONiC switch interfaces. You will not be able to ping between the two hosts because the routes between the switches do not exist yet (we have not configured BGP or any other embedded control protocol).
-
+This exercise will set up the host interfaces and internal routes. Then you will
+set up the SONiC switch interfaces. You will not be able to ping between the two
+hosts because the routes between the switches do not exist yet (we have not
+configured BGP or any other embedded control protocol).
 
 ### Figure 1 - Tutorial Sample Configuration
-![drawing](Figure1.svg)
 
+![drawing](Figure1.svg)
 
 ### Verify Connections
 
-Verify that the switch is wired correctly to the hosts and that the speed within each pair of connected interfaces matches. 
+Verify that the switch is wired correctly to the hosts and that the speed within
+each pair of connected interfaces matches.
 
-
-
-1. Login (`ssh`) to each switch and check the interface speed and that the expected interfaces are up. Reference: [SONiC Interfaces command reference](https://github.com/Azure/sonic-utilities/blob/master/doc/Command-Reference.md#interfaces)
+1. Login (`ssh`) to each switch and check the interface speed and that the
+   expected interfaces are up. Reference: [SONiC Interfaces command
+   reference](https://github.com/Azure/sonic-utilities/blob/master/doc/Command-Reference.md#interfaces)
 
     ```
     Switch$ show interfaces status
@@ -35,9 +47,10 @@ Verify that the switch is wired correctly to the hosts and that the speed within
     Ethernet124      13,14,15,16     100G   9100    N/A  hundredGigE32  routed    down       up     N/A         N/A
     ```
 
-
-
-2. If an expected connection is down, login (`ssh`) to the host(s). One potential problem is that the host interface speed does not match the switch interface speed. Check the speed on the host and, if necessary, change the switch’s interface speed to match the host.
+2. If an expected connection is down, login (`ssh`) to the host(s). One
+   potential problem is that the host interface speed does not match the switch
+   interface speed. Check the speed on the host and, if necessary, change the
+   switch’s interface speed to match the host.
 
     ```
     host1$ ethtool enp3s0f1
@@ -46,14 +59,12 @@ Verify that the switch is wired correctly to the hosts and that the speed within
     switch2$ sudo config interface speed Ethernet120 40000
     ```
 
-
 3. If the links are not up, set them to up.
 
     ```
     host1$ sudo ip link set up enp3s0f1
     host2$ sudo ip link set up enp3s0f0
     ```
-
 
 4. Verify on both switches.
 
@@ -62,17 +73,14 @@ Verify that the switch is wired correctly to the hosts and that the speed within
     switch2$ show interfaces status
     ```
 
-
-
 ### Host Interfaces
 
-
-
-1. On each host, set a new IP address and the outgoing route as needed for your network configuration (e.g., if using namespaces, set up a default route using the command, `ip route add default via 10.2.1.0`). 
+1. On each host, set a new IP address and the outgoing route as needed for your
+   network configuration (e.g., if using namespaces, set up a default route
+   using the command, `ip route add default via 10.2.1.0`).
 2. Then verify the IP address and route.
 
 Examples:
-
 
 ```
 host1$ sudo ip address add 10.1.1.2/24 dev enp3s0f1
@@ -101,19 +109,16 @@ host2$ ip route
     10.2.2.0/24 dev enp3s0f0 proto kernel scope link src 10.2.2.2
 ```
 
-
-
 ### Switch Interfaces
 
-
-
-1. Configure the switch interfaces with IP addresses in the same subnet as the IP addresses in your hosts. If you need to reboot your switches in exercises 3 or 4, remember to repeat this step.
+1. Configure the switch interfaces with IP addresses in the same subnet as the
+   IP addresses in your hosts. If you need to reboot your switches in exercises
+   3 or 4, remember to repeat this step.
 
     ```
     switch1$ sudo config interface ip add Ethernet120 10.1.1.1/24
     switch2$ sudo config interface ip add Ethernet120 10.2.2.1/24
     ```
-
 
 2. Verify on both switches.
 
@@ -129,16 +134,16 @@ host2$ ip route
     Ethernet120            10.2.2.1/24          up/up         N/A             N/A
     ```
 
-
-3. Clearing counters will make it easier to monitor the traffic in this exercise.
+3. Clearing counters will make it easier to monitor the traffic in this
+   exercise.
 
     ```
     switch1$ sonic-clear counters
     switch2$ sonic-clear counters
     ```
 
-
 4. We _cannot_ ping the new addresses because we have not set up a route yet.
+
     ```
     host1$ ping 10.2.2.2  (doesn’t work)
     host2$ ping 10.1.1.2  (doesn’t work)

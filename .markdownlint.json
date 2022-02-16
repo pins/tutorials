@@ -1,0 +1,11 @@
+{
+    "fenced-code-language": false,
+    "first-line-h1": false,
+    "line-length": {
+        "code_block_line_length": 180
+    },
+    "ol-prefix": false,
+    "ul-indent": {
+        "indent": 4
+    }
+}
