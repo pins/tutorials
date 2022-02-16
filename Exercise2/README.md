@@ -3,6 +3,7 @@ Copyright 2021-present Open Networking Foundation
 
 SPDX-License-Identifier: Apache-2.0
 -->
+
 ## Exercise 2 - Configure Tutorial Network
 
 The tutorial configuration consists of a server (it can be a laptop), two
