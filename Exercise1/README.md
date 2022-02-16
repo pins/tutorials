@@ -3,6 +3,7 @@ Copyright 2021-present Open Networking Foundation
 
 SPDX-License-Identifier: Apache-2.0
 -->
+
 ## Exercise 1 - Deploy SONiC/PINS Target Image to Switches
 
 This exercise will take you through the deployment of the SONiC/PINS target

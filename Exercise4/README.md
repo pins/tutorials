@@ -3,6 +3,7 @@ Copyright 2021-present Open Networking Foundation
 
 SPDX-License-Identifier: Apache-2.0
 -->
+
 ## Exercise 4 - Deploy and Configure ONOS
 
 With the topology in [Exercise2 - Figure

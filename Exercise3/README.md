@@ -3,6 +3,7 @@ Copyright 2021-present Open Networking Foundation
 
 SPDX-License-Identifier: Apache-2.0
 -->
+
 ## Exercise 3 - Set Up Pipeline and Routes
 
 There are several ways to set up an SAI pipeline and routes. This exercise uses
