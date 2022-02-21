@@ -29,20 +29,20 @@
             "mtu": "9100"
         },
         "Ethernet16": {
-            "lanes": "17,18,19.20",
+            "lanes": "17,18",
             "alias": "Ethernet3/1",
             "index": "3",
 	    "id"   : "16",
-            "speed": "100000",
+            "speed": "50000",
             "admin_status": "up",
             "mtu": "9100"
         },
         "Ethernet20": {
-            "lanes": "21,22,23,24",
+            "lanes": "21,22",
             "alias": "Ethernet3/5",
             "index": "3",
 	    "id"   : "20",
-            "speed": "100000",
+            "speed": "50000",
             "admin_status": "up",
             "mtu": "9100"
         },
