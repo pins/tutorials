@@ -90,7 +90,7 @@ Server$ docker kill onos
 ### Software for this Exercise
 
 There are eleven sample configuration files used in this exercise found in the
-PINS tutorials repository: `config-tutorial.json, flow-objectives.sh,
+PINS tutorials repository: `tutorial-netconfig.json, flow-objectives.sh,
 forward-switch1-host1.json, forward-switch1-host2.json,
 forward-switch2-host1.json, forward-switch2-host2.json, next-switch1-host1.json,
 next-switch1-host2.json, next-switch2-host1.json, next-switch2-host2.json,`and
@@ -98,14 +98,21 @@ next-switch1-host2.json, next-switch2-host1.json, next-switch2-host2.json,`and
 
 1. Download the files for Exercise 4 or clone the repository, as described in
    [Software Used in Tutorial](../README.md#software-used-in-tutorial).
-2. Use the following command to pull and start ONOS with the PINS driver and SAI
+2. Go to the directory with the configuration files for Exercise4. Ensure that the shell script is executable.
+
+    ```
+    Server$ cd $TUTORIALS_PATH/Exercise4
+    Server$ chmod 0755 flow-objectives.sh
+    ```
+
+3. Use the following command to pull and start ONOS with the PINS driver and SAI
    pipeliner installed.
 
     ```
     Server$ docker run --rm -t -d -p 8181:8181 -p 8101:8101 -p 5005:5005 -p 830:830 --pull always --name onos dmoro92/pins-onos:0.0.1
     ```
 
-3. Verify that ONOS is running.
+4. Verify that ONOS is running.
 
     ```
     Server$ docker ps
@@ -119,7 +126,7 @@ Example: `ssh -N -L 8181:localhost:8181 -L 8101:localhost:8101 pins-dev2`
 
 ### Configure ONOS
 
-The sample JSON configuration file, `config-tutorial.json`, sets up routes
+The sample JSON configuration file, `tutorial-netconfig.json`, sets up routes
 through both switch connections, Ethernet0 and Ethernet104. You will need to
 customize the configuration file for your network topology. The file contains
 these elements:
@@ -136,8 +143,8 @@ these elements:
    unless the command fails.
 
     ```
-    Server$ vim config-tutorial.json
-    Server$ curl --fail -sSL --user karaf:karaf -X POST http://${YOUR_IP}:8181/onos/v1/network/configuration -H Content-type:application/json -d@config-tutorial.json
+    Server$ vim tutorial-netconfig.json
+    Server$ curl --fail -sSL --user karaf:karaf -X POST http://${YOUR_IP}:8181/onos/v1/network/configuration -H Content-type:application/json -d@tutorial-netconfig.json
     ```
 
 2. If you check the Redis database on your switches, only the ACL entries are
@@ -156,7 +163,7 @@ these elements:
     `onf.p4info.pb.txt`, does not contain ACLs.
 
 3. Verify that the configuration that you loaded is correct using the ONOS CLI.
-   The output should match `config-tutorial.json`, although it may be in a
+   The output should match `tutorial-netconfig.json`, although it may be in a
    slightly different order.
 
     ```
