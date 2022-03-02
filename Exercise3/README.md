@@ -78,17 +78,24 @@ If you reload the configuration on your switches or reboot them, review Exercise
 
 ### Software for this Exercise
 
-1. Download the files for Exercise3 or clone the repository, as described in 
+1. Download the files for Exercise3 or clone the repository, as described in
 [Software Used in Tutorial](../README.md#software-used-in-tutorial).
 
-2. Go to the directory with the configuration files for Exercise3. 
+2. Go to the directory with the configuration files for Exercise3.
 
     ```
     Server$ cd $TUTORIALS_PATH/Exercise3
 
     ```
 
-There are two utilities used in this exercise, `p4rt-client` and `macToIpV6.`The `p4rt-client` configures the SAI layer of a SONiC-based switch via the P4Runtime Service. It can configure the switch, but it is not a runtime controller and cannot handle incoming packets. The `macToIpV6` utility takes a MAC address in the format `00:11:22:33:44:55` and prints the IPv6 link-local address to STDOUT. Linux and MacOS (Intel and M1) versions of these utilities are available for your server in [p4rt-client releases](https://github.com/pins/p4rt-client/releases). 
+There are two utilities used in this exercise, `p4rt-client` and `macToIpV6.`
+The `p4rt-client` configures the SAI layer of a SONiC-based switch via the
+P4Runtime Service. It can configure the switch, but it is not a runtime
+controller and cannot handle incoming packets. The `macToIpV6` utility takes
+a MAC address in the format `00:11:22:33:44:55` and prints the IPv6 link-local
+address to STDOUT. Linux and MacOS (Intel and M1) versions of these utilities
+are available for your server in
+[p4rt-client releases](https://github.com/pins/p4rt-client/releases).
 
 3. To get Linux versions of these utilities, use the following commands:
 
@@ -103,6 +110,7 @@ There are two utilities used in this exercise, `p4rt-client` and `macToIpV6.`The
     Server$ cd $TUTORIALS_PATH/Exercise3
     Server$ chmod 0755 p4rt-client-setup.sh p4rt-client macToIpV6
     ```
+
 ### p4rt-client Command Line Interface
 
 We will run `p4rt-client` commands (see
