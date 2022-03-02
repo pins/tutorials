@@ -78,49 +78,6 @@ If you reload the configuration on your switches or reboot them, review Exercise
 
 ### Software for this Exercise
 
-<!-----
-
-You have some errors, warnings, or alerts. If you are using reckless mode, turn it off to see inline alerts.
-* ERRORs: 1
-* WARNINGs: 0
-* ALERTS: 1
-
-Conversion time: 0.835 seconds.
-
-
-Using this Markdown file:
-
-1. Paste this output into your source file.
-2. See the notes and action items below regarding this conversion run.
-3. Check the rendered output (headings, lists, code blocks, tables) for proper
-   formatting and use a linkchecker before you publish this page.
-
-Conversion notes:
-
-* Docs to Markdown version 1.0β33
-* Tue Feb 22 2022 16:11:51 GMT-0800 (PST)
-* Source doc: SONiC/PINS Tutorial
-* This is a partial selection. Check to make sure intra-doc links work.
-
-ERROR:
-undefined internal link to this URL: "#heading=h.2p04fx16tvl9".link text: Software Used in Tutorial
-?Did you generate a TOC?
-
------>
-
-
-<p style="color: red; font-weight: bold">>>>>>  gd2md-html alert:  ERRORs: 1; WARNINGs: 0; ALERTS: 1.</p>
-<ul style="color: red; font-weight: bold"><li>See top comment block for details on ERRORs and WARNINGs. <li>In the converted Markdown or HTML, search for inline alerts that start with >>>>>  gd2md-html alert:  for specific instances that need correction.</ul>
-
-<p style="color: red; font-weight: bold">Links to alert messages:</p><a href="#gdcalert1">alert1</a>
-
-<p style="color: red; font-weight: bold">>>>>> PLEASE check and correct alert issues and delete this message and the inline alerts.<hr></p>
-
-
-The sample configuration files in this exercise, `onf.p4info.pb.txt` and `p4rt-client-setup.sh`, are found in the PINS tutorials repository. 
-
-
-
 1. Download the files for Exercise3 or clone the repository, as described in 
 [Software Used in Tutorial](../README.md#software-used-in-tutorial).
 
