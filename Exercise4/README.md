@@ -98,7 +98,8 @@ next-switch1-host2.json, next-switch2-host1.json, next-switch2-host2.json,`and
 
 1. Download the files for Exercise 4 or clone the repository, as described in
    [Software Used in Tutorial](../README.md#software-used-in-tutorial).
-2. Go to the directory with the configuration files for Exercise4. Ensure that the shell script is executable.
+2. Go to the directory with the configuration files for Exercise4. Ensure that
+   the shell script is executable.
 
     ```
     Server$ cd $TUTORIALS_PATH/Exercise4
