@@ -104,11 +104,11 @@ are available for your server in
     Server$ wget https://github.com/pins/p4rt-client/releases/download/202112/macToIpV6
     ```
 
-4. Make sure the script and programs are executable.
+4. Make sure the programs are executable.
 
     ```
     Server$ cd $TUTORIALS_PATH/Exercise3
-    Server$ chmod 0755 p4rt-client-setup.sh p4rt-client macToIpV6
+    Server$ chmod 0755 p4rt-client macToIpV6
     ```
 
 ### p4rt-client Command Line Interface
