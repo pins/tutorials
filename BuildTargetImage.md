@@ -17,9 +17,9 @@ python,` and `j2cli`. If you need to do a local build of the ONOS driver and SAI
 pipeline, you will also need `maven` and a Java JDK.
 
 1. Clone the PINS/sonic-buildimage repository using one of the following:
-    * HTTPS:       `git clone https://github.com/Azure/sonic-buildimage.git`
-    * SSH:         `git clone git@github.com:Azure/sonic-buildimage.git`
-    * Github CLI:  `gh repo clone Azure/sonic-buildimage`
+    * HTTPS:       `git clone https://github.com/sonic-net/sonic-buildimage.git`
+    * SSH:         `git clone git@github.com:sonic-net/sonic-buildimage.git`
+    * Github CLI:  `gh repo clone sonic-net/sonic-buildimage`
 2. Change to the new directory: `cd sonic-buildimage`
 3. Download submodules and checkout the correct commit number: `make init`
 

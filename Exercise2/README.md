@@ -28,7 +28,7 @@ each pair of connected interfaces matches.
 
 1. Login (`ssh`) to each switch and check the interface speed and that the
    expected interfaces are up. Reference: [SONiC Interfaces command
-   reference](https://github.com/Azure/sonic-utilities/blob/master/doc/Command-Reference.md#interfaces)
+   reference](https://github.com/sonic-net/sonic-utilities/blob/master/doc/Command-Reference.md#interfaces)
 
     ```
     Switch$ show interfaces status

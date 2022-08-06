@@ -63,17 +63,17 @@ to SONiC as described in the [PINS high-level design
 document](https://github.com/pins/SONiC/blob/pins-hld/doc/pins/pins_hld.md).
 [P4Runtime
 (P4RT)](https://github.com/pins/SONiC/blob/p4rt_hld/doc/pins/p4rt_app_hld.md)
-(code: [Azure/sonic-pins](https://github.com/Azure/sonic-pins)) is a new
+(code: [sonic-net/sonic-pins](https://github.com/sonic-net/sonic-pins)) is a new
 application running in its own container that receives P4 programming requests
 from an SDN controller and writes intents to new P4 tables. In
-[Azure/sonic-swss](https://github.com/Azure/sonic-swss),
+[sonic-net/sonic-swss](https://github.com/sonic-net/sonic-swss),
 [P4Orch](https://github.com/pins/SONiC/blob/pins-hld/doc/pins/pins_hld.md#p4-orchagent)
 and [P4RT
 tables](https://github.com/pins/SONiC/blob/pins-hld/doc/pins/pins_hld.md#p4-appl-db-tables)
 were added to process database entries, create SAI objects, and add them to the
 ASIC database. PINS also introduces modifications to
-[Azure/sonic-swss-common](https://github.com/Azure/sonic-swss-common) and
-[Azure/sonic-buildimage](https://github.com/Azure/sonic-buildimage).
+[sonic-net/sonic-swss-common](https://github.com/sonic-net/sonic-swss-common) and
+[sonic-net/sonic-buildimage](https://github.com/sonic-net/sonic-buildimage).
 
 ### Tutorial Outline
 
@@ -81,9 +81,9 @@ The tutorial and hands-on exercises familiarize users with PINS
 ([webpage](https://opennetworking.org/pins/), [Working Group Github
 repositories](https://github.com/pins),
 [wiki](https://wiki.opennetworking.org/display/COM/PINS)). Activities assume a
-basic knowledge of SONiC ([webpage](https://azure.github.io/SONiC/), [Github
-repository](https://github.com/Azure/SONiC/),
-[wiki](https://github.com/Azure/SONiC/wiki)) and SDN, including the [P4
+basic knowledge of SONiC ([webpage](https://sonic-net.github.io/SONiC/), [Github
+repository](https://github.com/sonic-net/SONiC/),
+[wiki](https://github.com/sonic-net/SONiC/wiki)) and SDN, including the [P4
 language](https://p4.org) and ONOS ([webpage](https://opennetworking.org/onos/),
 [wiki](https://wiki.onosproject.org/display/ONOS/ONOS)). We provide participants
 with configuration files and scripts.

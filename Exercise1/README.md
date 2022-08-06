@@ -8,7 +8,7 @@ SPDX-License-Identifier: Apache-2.0
 
 This exercise will take you through the deployment of the SONiC/PINS target
 image on your switches. If you have questions about SONiC deployment, see the
-[SONiC documentation](https://github.com/Azure/SONiC/wiki/).
+[SONiC documentation](https://github.com/sonic-net/SONiC/wiki/).
 
 ### Get the SONiC/PINS Target Image(s) for Your Switches
 
@@ -46,14 +46,14 @@ Three installers are available to deploy the SONiC/PINS target image.
 1. The SONiC installer upgrades a switch with SONiC installed to SONiC/PINS.
    (brownfield) \
 Reference: [SONiC
-installer](https://github.com/Azure/SONiC/blob/master/doc/SONiC-User-Manual.md#3231-sonic-installer)
+installer](https://github.com/sonic-net/SONiC/blob/master/doc/SONiC-User-Manual.md#3231-sonic-installer)
 2. The ONIE installer bootstraps a switch without SONiC. If your switch does not
    have ONIE, you will need to install it first. (greenfield)  \
 Reference: [SONiC ONIE installation
-instructions](https://github.com/Azure/SONiC/blob/master/doc/SONiC-User-Manual.md#1121-install-sonic-onie-image)
+instructions](https://github.com/sonic-net/SONiC/blob/master/doc/SONiC-User-Manual.md#1121-install-sonic-onie-image)
 3. The Aboot installer bootstraps Arista switches without SONiC. (greenfield)  \
 Reference: [SONiC EOS installation
-instructions](https://github.com/Azure/SONiC/blob/master/doc/SONiC-User-Manual.md#1122-install-sonic-eos-image)
+instructions](https://github.com/sonic-net/SONiC/blob/master/doc/SONiC-User-Manual.md#1122-install-sonic-eos-image)
 
 #### SONiC Installer
 
@@ -320,7 +320,7 @@ use the `sudo config reload -y` command to restart the docker containers and
 incorporate the changes.
 
 The [Troubleshooting
-section](https://github.com/Azure/SONiC/blob/master/doc/SONiC-User-Manual.md#6-troubleshooting)
+section](https://github.com/sonic-net/SONiC/blob/master/doc/SONiC-User-Manual.md#6-troubleshooting)
 of the SONiC User Manual is helpful if you run into problems.
 
 ### Note About Custom Configuration
