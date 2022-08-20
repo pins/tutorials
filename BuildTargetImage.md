@@ -42,7 +42,7 @@ Configure your build variables (`$BUILD_VARS`) on the command line or in the
       starting any build
 
 Sample values for `$DESIRED_PLATFORM` are `barefoot, broadcom, marvell,
-mellanox, cavium, centec, nephos, innovium, p4, vs`.
+mellanox, cavium, centec, nephos, innovium, vs`.
 
 Run the make commands.
 
