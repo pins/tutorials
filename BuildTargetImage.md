@@ -13,7 +13,10 @@ your image, follow the instructions in [Exercise 1 - Deploy SONiC/PINS Target
 Image to Switches](./Exercise1).
 
 The following software is needed to build the image: `curl, zip, unzip, tar,
-python,` and `j2cli`. If you need to do a local build of the ONOS driver and SAI
+python, j2cli` and `docker`.
+> Note: Ensure that docker is not installed through snap. You may follow this guide [here](https://docs.docker.com/engine/install/ubuntu/). Follow post-install steps to make sure docker runs without `sudo`.
+ 
+ If you need to do a local build of the ONOS driver and SAI
 pipeline, you will also need `maven` and a Java JDK.
 
 1. Clone the PINS/sonic-buildimage repository using one of the following:
@@ -21,7 +24,9 @@ pipeline, you will also need `maven` and a Java JDK.
     * SSH:         `git clone git@github.com:Azure/sonic-buildimage.git`
     * Github CLI:  `gh repo clone Azure/sonic-buildimage`
 2. Change to the new directory: `cd sonic-buildimage`
-3. Download submodules and checkout the correct commit number: `make init`
+3. Ensure that overlay module is loaded on your development system: `sudo modprobe overlay`
+4. (Optional) Checkout a specific branch. By default, it uses master branch: `git checkout [branch_name]`
+5. Download submodules and checkout the correct commit number: `make init`
 
 ### Build Target Binary
 
