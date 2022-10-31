@@ -21,7 +21,7 @@ SD-Fabric. (Normally, the segment routing application relies on MPLS rules in
 the spines, but we use IPv4 routes in this case.) The result is that the fabric
 acts as one big router. For more information on the switch pipeline, you can
 find the P4 SAI tables here:
-[Azure/sonic-pins/sai_p4](https://github.com/Azure/sonic-pins/tree/main/sai_p4/instantiations/google).
+[sonic-net/sonic-pins/sai_p4](https://github.com/sonic-net/sonic-pins/tree/main/sai_p4/instantiations/google).
 The `middleblock.p4` instantiation of the SAI pipeline is close to what we used
 for our demonstration.
 
